@@ -1,0 +1,233 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+.main-container {
+  background-color: #f3f3f3;
+}
+
+@media (min-width: 961px) {
+  .main-container {
+    width: 100%;
+  }
+}
+
+.main-container > div {
+  background-color: #f3f3f3;
+}
+.sidebar {
+  min-width: 300px;
+  max-width: 300px;
+  height: 100vh;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: #262a35;
+  z-index: 3;
+
+  @media (width < 768px) {
+    position: absolute;
+  }
+}
+
+.sidebarTop {
+  min-width: 300px;
+  max-width: 300px;
+  height: 40vh;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: #262a35;
+}
+
+tr {
+  margin-bottom: 10px;
+}
+.sidebar-menu {
+  margin-top: 100px;
+}
+.sidebar a {
+  color: #cdcdcd;
+  text-decoration: none;
+}
+.sidebar .active {
+  color: #0060b8;
+}
+.nav-link img,
+a img {
+  margin-right: 10px;
+  height: 30px;
+}
+.nav-item,
+.dropdown-item {
+  margin: 15px 0px;
+}
+.dropdown-item {
+  font-size: 18px;
+}
+a:focus,
+a:hover,
+a > *:focus,
+a > *:hover {
+  color: #0060b8;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+header {
+  padding: 32px 50px 0 50px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  border-radius: 4px;
+  padding-left: 30px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%238B8B8B" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.398 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.04 1.04 0 0 0-.114-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>')
+    no-repeat 10px center;
+  background-size: 16px 16px;
+}
+.form-control-feedback {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.form-control {
+  padding-left: 2.375rem;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.table td {
+  height: 69px;
+  vertical-align: middle;
+}
+
+.table thead {
+  border: transparent;
+  background-color: transparent !important;
+}
+
+.table tr {
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.dataTables_filter label {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.dataTables_filter input {
+  font-size: 1rem;
+}
+
+.download-report {
+  display: flex;
+  width: 173px;
+  height: 34px;
+  padding: 8px 15px 8px 15px;
+  gap: 10px;
+  border-radius: 5px 0px 0px 0px;
+  background-color: rgba(0, 96, 184, 0.1);
+  color: rgba(0, 96, 184, 1);
+  font-size: 14px;
+  border: none;
+  align-items: center;
+}
+
+.search-and-entries-container {
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 55px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  margin-right: 55px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.createUserModal {
+  display: flex;
+  background-color: white;
+  width: 978px;
+  height: 369px;
+  top: 20%;
+  left: 25%;
+  opacity: 0px;
+  border-radius: 30px;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-evenly;
+  border: 1px #d3d3d3 solid;
+
+  .inputContainer {
+    height: 87px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 40px;
+  }
+}
+
+.updatePasswordModal {
+  display: flex;
+  background-color: white;
+  width: 978px;
+  height: 369px;
+  top: 20%;
+  left: 25%;
+  opacity: 0px;
+  border-radius: 30px;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-evenly;
+  border: 1px #d3d3d3 solid;
+
+  .inputContainer {
+    height: 87px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 40px;
+  }
+}
+
+button {
+  height: 49px;
+  background-color: #0060b8;
+  color: white;
+  border: 0;
+  width: 195px;
+  border-radius: 10px;
+}
+
+.action-button {
+  width: 105px;
+  display: flex;
+  height: 34px;
+  padding: 8px 15px 8px 15px;
+  gap: 10px;
+  border-radius: 5px 0px 0px 0px;
+  border: none;
+  align-items: center;
+}
+
+.search-icon {
+  position: relative;
+  left: 8px;
+  top: 35px;
+}
