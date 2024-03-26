@@ -94,10 +94,6 @@
   border-width: 2px;
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
 .register-container {
   display: flex;
   margin-top: 24px;
@@ -194,4 +190,21 @@ a>*:hover {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.btn-custom-upload {
+  background-color: #E0E0E0;
+  color: #4F4F4F;
+  padding: 20px 18px;
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  text-align: start;
+}
+
+.btn-custom-upload:hover {
+  background-color: #cfcfcf;  /* Darker shade of blue for hover effect */
 }
