@@ -1,0 +1,197 @@
+* {
+  font-family: Inter;
+}
+
+.login {
+  min-height: 100vh;
+}
+
+.art_work {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.main_heading {
+  font-weight: 700;
+}
+
+.sub_heading {
+  font-weight: 400;
+  color: #7a7a7a;
+  font-size: large;
+  line-height: 1.6;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+
+.customInput {
+  height: 60px;
+  border-radius: 5px;
+}
+
+.customLabel, .form-control::placeholder {
+  color: #7a7a7a;
+}
+
+.customLoginButton {
+  height: 55px;
+  width: 120px;
+  background-color: #0060b8;
+  border-radius: 5px;
+}
+
+.customRegisterButton {
+  height: 50px;
+  width: 215px;
+  border-radius: 5px;
+  background-color: #0060b8;
+  color: white;
+}
+
+.btn-container>button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.customShipperButton {
+  background-color: #f0f5fb;
+  color: #0060b8;
+  border: 2px solid #0060b8;
+}
+
+.customCarrierButton {
+  background-color: white;
+  color: #4f4f4f;
+  border: 2px solid #e0e0e0;
+}
+
+.customInput::placeholder {
+  color: #BDBDBD;
+}
+
+.form,
+.form-container {
+  gap: 32px;
+}
+
+.customSignInButton {
+  height: 55px;
+  width: 120px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #393939;
+  border-color: #0060b8;
+  border-width: 2px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.register-container {
+  display: flex;
+  margin-top: 24px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .row {
+    width: 100%;
+  }
+
+  .form-group {
+    display: block;
+  }
+
+  .form-control {
+    width: auto;
+  }
+
+  .customInput {
+    box-sizing: border-box;
+  }
+
+  .register-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .register-container .div {
+    padding: 0%;
+  }
+
+}
+
+.g-recaptcha {
+  height: 78px;
+}
+
+
+.main-container {
+  background-color: #f3f3f3;
+  width: 100%;
+}
+
+.main-container>div {
+  background-color: #f3f3f3;
+}
+
+.sidebar {
+  min-width: 362px;
+  max-width: 362px;
+  height: 100vh;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.sidebar-menu {
+  margin-top: 100px;
+}
+
+.sidebar a {
+  color: #cdcdcd;
+  text-decoration: none;
+}
+
+.sidebar .active {
+  color: #0060b8;
+}
+
+.nav-link img,
+a img {
+  margin-right: 10px;
+  height: 30px;
+}
+
+.nav-item,
+.dropdown-item {
+  margin: 15px 0px;
+}
+
+.dropdown-item {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+a:focus,
+a:hover,
+a>*:focus,
+a>*:hover {
+  color: #0060b8;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
