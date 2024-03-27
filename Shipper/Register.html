@@ -11,17 +11,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-
-
 </head>
 
 <body>
-  <div class="container-fluid ps-md-0">
-    <div class="row g-0">
-      <div class="d-none d-md-flex min-vh-100 col-md-4 col-lg-6">
-        <img src="./assets/shipper-img.svg" style="width: 100%" class="img-fluid art_work" alt="Responsive image" />
+  <div class="main-container">
+    <div class="parent-row row g-0">
+      <div class="img-container">
+        <img src="./assets/shipper-img.svg" class="background-img" alt="Responsive image">
       </div>
-      <div class="col-md-8 col-lg-6" style="height: 100vh; vertical-align: middle;">
+      <div class="form-main-container">
         <div class="login d-flex align-items-center py-5">
           <div class="container">
             <div class="row">
@@ -145,8 +143,13 @@
                       <div class="d-flex justify-content-start">
                         <div>Already have an account?</div>
                         <div>
-                          <a style="color: #0060B8; font-size: 16px; cursor: pointer; text-decoration: none; margin-left: 15px;"
-                            href="Login.html">Sign in</a>
+                          <a style="
+                                color: #0060b8;
+                                font-size: 16px;
+                                cursor: pointer;
+                                text-decoration: none;
+                                margin-left: 15px;
+                              " href="Login.html">Sign in</a>
                         </div>
                       </div>
                     </div>
@@ -161,7 +164,7 @@
   </div>
   <script>
     function navigateToCarrier() {
-      window.location.href = '../Carrier/Register.html'; // Change 'yourPage.html' to your actual page URL
+      window.location.href = "../Carrier/Register.html"; // Change 'yourPage.html' to your actual page URL
     }
   </script>
   <script src="https://www.google.com/recaptcha/api.js"></script>
