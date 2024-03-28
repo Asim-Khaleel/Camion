@@ -83,7 +83,7 @@
   color: white;
 }
 
-.btn-container>button {
+.btn-container > button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,16 +97,56 @@
   background-color: white;
   color: #4f4f4f;
   border: 2px solid #e0e0e0;
+  span {
+    color: #4f4f4f;
+  }
+  svg {
+    stroke: #4f4f4f;
+    stroke-width: 0.5px;
+  }
 }
 
-.customCarrierButton {
+.customShipperButtonEnabled {
   background-color: #f0f5fb;
   color: #0060b8;
   border: 2px solid #0060b8;
+  span {
+    color: #0060b8;
+  }
+  svg {
+    stroke: #0060b8;
+    stroke-width: 0.5px;
+  }
+}
+
+.customCarrierButton {
+  background-color: white;
+  color: #4f4f4f;
+  border: 2px solid #e0e0e0;
+  span {
+    color: #4f4f4f;
+  }
+  svg {
+    stroke: #4f4f4f;
+    stroke-width: 1.5px;
+  }
+}
+
+.customCarrierButtonEnabled {
+  background-color: #f0f5fb;
+  color: #0060b8;
+  border: 2px solid #0060b8;
+  span {
+    color: #0060b8;
+  }
+  svg {
+    stroke: #0060b8;
+    stroke-width: 1.5px;
+  }
 }
 
 .customInput::placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .form,
@@ -115,10 +155,10 @@
 }
 
 .btn-custom-upload {
-  background-color: #E0E0E0;
-  color: #4F4F4F;
+  background-color: #e0e0e0;
+  color: #4f4f4f;
   padding: 20px 18px;
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
@@ -175,7 +215,6 @@
   .register-container .div {
     padding: 0%;
   }
-
 }
 
 .g-recaptcha {
