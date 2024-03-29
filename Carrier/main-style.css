@@ -17,8 +17,8 @@ a img {
 
 a:focus,
 a:hover,
-a > *:focus,
-a > *:hover {
+a>*:focus,
+a>*:hover {
   color: #0060b8;
 }
 
@@ -108,9 +108,11 @@ tr {
 .accordion-button:not(.collapsed)::after {
   --bs-accordion-btn-active-icon: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12.5L10 7.5L15 12.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>');
 }
-.burger-menu{
+
+.burger-menu {
   display: none;
 }
+
 .profile-img {
   width: 35px;
   height: 35px;
@@ -128,14 +130,17 @@ tr {
   gap: 40px;
   height: 100vh;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .page-title {
   font-size: 2rem;
 }
+
 .menu-group {
   gap: 40px;
 }
+
 .spinner-container {
   display: flex;
   flex-direction: row;
@@ -280,26 +285,69 @@ table.equal-columns td table.equal-columns td {
   box-sizing: border-box;
 }
 
-.action-container{
+.action-container {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 10px;
+  gap: 15px;
   cursor: pointer;
-  div{
+
+  div {
     display: flex;
     flex-direction: column;
     gap: 5px;
     align-items: center;
-    img{
+
+    img {
       width: 20px;
       height: 20px;
     }
   }
 }
 
+.filter-btn {
+  border: none;
+  background-color: transparent;
+  height: 54px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-item-btn {
+  height: 54px;
+  background-color: #0060b8;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 17px 30px;
+}
+
+.itema {
+  position: fixed;
+  z-index: 1000;
+}
 
 
+.gm-ui-hover-effect {
+  display: none !important;
+}
+
+
+.gm-style-iw-d {
+  background-color: #0060B8 !important;
+  color: white;
+  overflow: hidden !important;
+}
+
+/* Optional: Style the tail/pointer of the InfoWindow */
+.gm-style .gm-style-iw-t::after {
+  background: #0060B8 !important;
+  
+  /* Match the tail's color with the InfoWindow background */
+}
 @media (max-width: 1024px) {
   .table tr {
     font-size: 14px;
@@ -314,74 +362,72 @@ table.equal-columns td table.equal-columns td {
     font-size: 35px;
   }
 
-     .search-input {
-       width: 40%;
-       padding: 5px 5px;
-     }
-  
-     .search-input img {
-       width: 25px;
-       height: 25px;
-     }
-  
-  
-     .search-input input {
-       padding: 0px 0px 0px 35px;
-       font-size: 16px;
-     }
-  
-     .spinner-container {
-       gap: 5px;
-     }
-  
-     .spinner-container span {
-       font-size: 16px;
-     }
-  
-     .value-spinner {
-       height: 40px;
-       justify-content: center;
-       display: flex;
-       width: max-content;
-       align-items: center;
-       background-color: white;
-       border: 1px solid #e0e0e0;
-       border-radius: 5px;
-       padding: 0px 10px 0px 5px;
-       gap: 5px;
-     }
-  
-     .value-spinner img {
-       cursor: pointer;
-       border: none;
-       background-color: transparent;
-     }
-  
-     .value-spinner input {
-       text-align: center;
-       width: 30px;
-       border: none;
-       font-weight: 600;
-       background-color: white;
-       color: #535353;
-       font-size: 18px;
-     }
-  
-     .profile-img {
-       width: 35px;
-       height: 35px;
-     }
-  
-     .notification-icon,
-     .menu-icon {
-       width: 22px;
-       height: 22px;
-     }
-  
-     .menu-group {
-       gap: 15px;
-     }
+  .search-input {
+    width: 40%;
+    padding: 5px 5px;
+  }
 
+  .search-input img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .search-input input {
+    padding: 0px 0px 0px 35px;
+    font-size: 16px;
+  }
+
+  .spinner-container {
+    gap: 5px;
+  }
+
+  .spinner-container span {
+    font-size: 16px;
+  }
+
+  .value-spinner {
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 0px 10px 0px 5px;
+    gap: 5px;
+  }
+
+  .value-spinner img {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+
+  .value-spinner input {
+    text-align: center;
+    width: 30px;
+    border: none;
+    font-weight: 600;
+    background-color: white;
+    color: #535353;
+    font-size: 18px;
+  }
+
+  .profile-img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .notification-icon,
+  .menu-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .menu-group {
+    gap: 15px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -449,6 +495,7 @@ table.equal-columns td table.equal-columns td {
   .table tr {
     font-size: 12px;
   }
+
   .profile-img {
     width: 25px;
     height: 25px;
@@ -459,10 +506,32 @@ table.equal-columns td table.equal-columns td {
     width: 12px;
     height: 12px;
   }
+
   .menu-group {
     gap: 15px;
   }
-    .burger-menu {
-      display: block;
+
+  .burger-menu {
+    display: block;
+  }
+
+  .filter-btn {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: x-small;
+
+    img {
+      width: 12px;
+      height: 12px;
     }
+  }
+
+  .add-item-btn {
+    height: 25px;
+    font-size: x-small;
+    padding: 4px 15px;
+  }
 }
