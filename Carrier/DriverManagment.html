@@ -136,10 +136,91 @@
                 <div>
                     <div class="search-and-entries-container">
                         <div>
-                           <button class="filter-btn"><img src="assets/ic-filter.svg" /> Filter</button>
+                            <button class="filter-btn"><img src="assets/ic-filter.svg" /> Filter</button>
                         </div>
-                        <div >
-                           <button class="add-item-btn" id="add-driver-btn">Add Driver</button>
+                        <div>
+                            <button class="add-item-btn" id="add-driver-btn">Add Driver</button>
+                            <div id="addNewDriverModal" class="modal">
+
+                                <div class="modal-content">
+                                    <p class="form-title">Add A New Driver</p>
+                                    <form id="addDriverForm">
+
+                                        <div class="form-group mb-lg-4 mb-md-3 mb-2">
+                                            <label for="driverName">
+                                                <p class="customLabel">Driver's Name</p>
+                                            </label>
+                                            <input type="text" class="form-control customInput" id="driverName"
+                                                aria-label="Driver's Name" placeholder="Enter Driver Name" />
+                                        </div>
+
+                                        <div class="form-group mb-lg-4 mb-md-3 mb-2">
+                                            <label for="driverIqama">
+                                                <p class="customLabel">Driver's ID/Iqama</p>
+                                            </label>
+                                            <input type="text" class="form-control customInput" id="driverIqama"
+                                                aria-label="Driver's ID/Iqama" placeholder="Enter Number" />
+                                        </div>
+
+
+                                        <div class="form-group mb-lg-4 mb-md-3 mb-2">
+                                            <label for="licenseNumber">
+                                                <p class="customLabel">License Number</p>
+                                            </label>
+                                            <input type="text" class="form-control customInput" id="licenseNumber"
+                                                aria-label="License Number" placeholder="Enter License Number" />
+                                        </div>
+                                        <div class="form-group mb-lg-4 mb-md-3 mb-2">
+                                            <label for="dateOfBirth">
+                                                <p class="customLabel">Date of Birth</p>
+                                            </label>
+                                            <input type="text" class="form-control customInput" id="dateOfBirth"
+                                                aria-label="Date of Birth" placeholder="dd/mm/yyyy"
+                                                onfocus="(this.type='date')" />
+                                        </div>
+
+                                        <div class="form-group mb-lg-4 mb-md-3 mb-2">
+                                            <label for="dateOfBirth">
+                                                <p class="customLabel">Nationality</p>
+                                            </label>
+                                            <select class="form-select customInput" aria-label="Nationality">
+                                                <option selected>Select Nationality</option>
+                                                <option selected>Saudi</option>
+                                                <option selected>Iraqi</option>
+                                                <option selected>Egyptian</option>
+                                                <option selected>Qatari</option>
+                                            </select>
+                                        </div>
+
+
+
+                                        <div class="form-group mb-lg-4 mb-md-3 mb-2">
+                                            <label for="mobileNumber">
+                                                <p class="customLabel">Mobile Number</p>
+                                            </label>
+                                            <input type="text" class="form-control customInput" id="mobileNumber"
+                                                aria-label="Mobile Number" placeholder="Enter Mobile Number" />
+                                        </div>
+
+                                        <!-- Upload Document -->
+                                        <div class="mb-lg-4 mb-md-3 mb-2">
+                                            <label class="customLabel">Upload
+                                                Document (Iqama/ID)</label>
+                                            <div class="file-container">
+                                                <button id="customButton" class="btn-custom-upload">Upload</button>
+                                                <input type="file" id="fileInput" style="display: none;" />
+                                            </div>
+                                        </div>
+
+                                        <div class="d-grid">
+                                            <button type="submit" class="submit-btn btn btn-primary">Add Driver</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                            </div>
+
                         </div>
                     </div>
                     <div class="search-and-entries-container mt-lg-4 mt-md-2 mt-1" style="margin-top: 30px;">
@@ -202,207 +283,14 @@
                                     <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
                                     <td scope="col">
                                         <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">Ali Abbasi</td>
-                                    <td scope="col">09876543212345678</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">11/14/2024</td>
-                                    <td scope="col">Saudi Arabia</td>
-                                    <td scope="col">+96 999 8876</td>
-                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                 <tr>
                                     <td scope="col">Ali Abbasi</td>
                                     <td scope="col">09876543212345678</td>
                                     <td scope="col">1234567890</td>
@@ -429,8 +317,231 @@
                                     <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
                                     <td scope="col">
                                         <div class="action-container">
-                                            <div><img src="/assets/ic-edit.svg" /><span style="color: #27AE60;">Edit</span></div>
-                                            <div><img src="/assets/ic-delete.svg" /><span style="color: #EB5757;">Delete</span></div>
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Ali Abbasi</td>
+                                    <td scope="col">09876543212345678</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">11/14/2024</td>
+                                    <td scope="col">Saudi Arabia</td>
+                                    <td scope="col">+96 999 8876</td>
+                                    <td scope="col"><a style="color: #0060B8; cursor: pointer;">View Iqama/ID</a></td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div><img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27AE60;">Edit</span></div>
+                                            <div><img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #EB5757;">Delete</span></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -456,6 +567,7 @@
         let currentIndex = 0;
 
         function changeValue(direction) {
+
             currentIndex += direction;
 
             if (currentIndex >= values.length) {
@@ -466,6 +578,20 @@
 
             document.getElementById("spinnerValue").value = values[currentIndex];
         }
+        document.getElementById('customButton').addEventListener('click', function () {
+            document.getElementById('fileInput').click(); 
+        });
+        var modal = document.getElementById('addNewDriverModal');
+        var btn = document.getElementById('add-driver-btn');
+        btn.onclick = function () {
+            modal.style.display = 'block';
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
     </script>
 </body>
 

@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col  gap-1 gap-sm-2 gap-md-3 gap-lg-5 gap-xl-5">
+            <div class="col main-container gap-0">
                 <div class="burger-menu">
                     <span onclick="toggleSidebar()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -124,7 +124,8 @@
                         </svg>
                     </span>
                 </div>
-                <header class="page-title bg-transparent  m-1 m-sm-2 m-md-3 m-lg-4 m-xl-5 d-flex justify-content-between align-items-center">
+                <header
+                    class="page-title bg-transparent d-flex justify-content-between align-items-center m-1 m-sm-1 m-md-2 m-lg-3 m-xl-4">
                     <span style="font-weight: 700; color: #535353">Tracking</span>
 
                     <div class="menu-group ml-3 d-flex flex-row-reverse justify-content-center align-items-center">
@@ -135,7 +136,7 @@
                     </div>
                 </header>
                 <div>
-                    <div id="map" style="height: 80vh; width: 100%"></div>
+                    <div id="map" style="height: 90vh; width: 100%"></div>
                 </div>
             </div>
         </div>
@@ -147,7 +148,7 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDiVqAHkVC5P9KTnq40tL3gVHG1tTJ4Dk&callback=initMap"></script>
 
-    <script type="module">
+    <script>
         function toggleSidebar() {
             console.log("I am clicked");
             document.getElementById("sidebar-container").classList.toggle("d-block");
@@ -155,18 +156,6 @@
 
         const values = [10, 20, 30, 40, 50];
         let currentIndex = 0;
-
-        function changeValue(direction) {
-            currentIndex += direction;
-
-            if (currentIndex >= values.length) {
-                currentIndex = values.length - 1;
-            } else if (currentIndex < 0) {
-                currentIndex = 0;
-            }
-
-            document.getElementById("spinnerValue").value = values[currentIndex];
-        }
 
         async function initMap() {
             const mapOptions = {
@@ -182,7 +171,7 @@
                     lat: 24.75635,
                     title: "Marker 1",
                     icon: "assets/ic-tracker.svg",
-                    content: `Ahmed Yasir <br/> 5675 LSD`
+                    content: `<div class="custom-marker"><span style="font-weight:800;">Ahmed Yasir</span><br/> 5675 LSD</div>`
 
                 },
                 {
@@ -190,7 +179,7 @@
                     lat: 24.75011,
                     title: "Marker 2",
                     icon: "assets/ic-tracker.svg",
-                    content: `Ahmed Yasir <br/> 5675 LSD`
+                    content: `<div class="custom-marker"><span style="font-weight:800;">Ahmed Yasir</span><br/> 5675 LSD</div>`
 
                 },
                 {
@@ -198,7 +187,7 @@
                     lat: 24.74013,
                     title: "Marker 3",
                     icon: "assets/ic-tracker.svg",
-                    content: `Ahmed Yasir <br/> 5675 LSD`
+                    content: `<div class="custom-marker"><span style="font-weight:800;">Ahmed Yasir</span><br/> 5675 LSD</div>`
 
                 },
                 {
@@ -206,53 +195,10 @@
                     lat: 24.67463,
                     title: "Marker 3",
                     icon: "assets/ic-tracker.svg",
-                    content: `Ahmed Yasir <br/> 5675 LSD`
+                    content: `<div class="custom-marker"><span style="font-weight:800;">Ahmed Yasir</span><br/> 5675 LSD</div>`
 
                 },
             ];
-
-            class CustomInfoWindow extends google.maps.OverlayView {
-                constructor(position, content) {
-                    super();
-                    this.position = position;
-                    this.content = content;
-                    this.div = null;
-                }
-
-                onAdd() {
-                    this.div = document.createElement('div');
-                    this.div.style.position = 'absolute';
-                    this.div.style.backgroundColor = '#ff0000'; // Your custom background color
-                    this.div.innerHTML = this.content;
-
-                    const panes = this.getPanes();
-                    panes.overlayLayer.appendChild(this.div);
-                }
-
-                draw() {
-                    const overlayProjection = this.getProjection();
-                    const sw = overlayProjection.fromLatLngToDivPixel(this.position);
-                    const div = this.div;
-                    div.style.left = `${sw.x}px`;
-                    div.style.top = `${sw.y}px`;
-                }
-
-                onRemove() {
-                    if (this.div) {
-                        this.div.parentNode.removeChild(this.div);
-                        this.div = null;
-                    }
-                }
-            }
-
-            // To use the custom info window:
-            const customInfoWin = new CustomInfoWindow(
-                new google.maps.LatLng(-34.397, 150.644),
-                '<div style="padding: 10px;">Custom Info Window content</div>'
-            );
-            customInfoWin.setMap(map);
-
-
 
             markers.forEach(markerInfo => {
                 const marker = new google.maps.Marker({
@@ -261,11 +207,14 @@
                     title: markerInfo.title,
                     icon: markerInfo.icon,
                 });
-                const infoWindow = customInfoWin;
-                // const infoWindow = new google.maps.InfoWindow({
-                //     content: markerInfo.content
-                // });
 
+
+                // Create an InfoWindow with content
+                const infoWindow = new google.maps.InfoWindow({
+                    content: markerInfo.content
+                });
+
+                // Open the InfoWindow
                 infoWindow.open({
                     anchor: marker,
                     map,

@@ -17,8 +17,8 @@ a img {
 
 a:focus,
 a:hover,
-a>*:focus,
-a>*:hover {
+a > *:focus,
+a > *:hover {
   color: #0060b8;
 }
 
@@ -330,23 +330,115 @@ table.equal-columns td table.equal-columns td {
   z-index: 1000;
 }
 
+.custom-marker {
+  padding: 5px 15px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
 
 .gm-ui-hover-effect {
   display: none !important;
 }
 
-
 .gm-style-iw-d {
-  background-color: #0060B8 !important;
+  background-color: #0060b8 !important;
   color: white;
   overflow: hidden !important;
 }
 
-/* Optional: Style the tail/pointer of the InfoWindow */
-.gm-style .gm-style-iw-t::after {
-  background: #0060B8 !important;
-  
-  /* Match the tail's color with the InfoWindow background */
+.gm-style .gm-style-iw-tc::after {
+  background-color: #0060b8;
+}
+
+.gm-style .gm-style-iw-c {
+  padding: 0%;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 1px;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 50px 60px;
+  border: 1px solid #888;
+  width: 677px;
+  border-radius: 30px;
+  gap: 20px;
+}
+.submit-btn {
+  width: max-content;
+  margin: 20px auto 0px auto;
+  background-color: #0060b8;
+  padding: 17px 34px 17px 34px;
+  border-radius: 10px;
+}
+
+.btn-custom-upload {
+  background-color: #dce0f9;
+  color: #7b7878;
+  padding: 0px 35px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  height: 50px;
+  text-align: start;
+}
+
+.btn-custom-upload:hover {
+  background-color: rgb(172, 184, 240);
+  color: white;
+}
+.form-group {
+  display: block;
+}
+.form-title {
+  font-size: 24px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+}
+.customLabel {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.customInput {
+  font-size: 16px;
+  height: 40px;
+}
+
+.no-scrollbar {
+  overflow-y: auto;
+  /* Allows vertical scrolling but does not always show the scrollbar */
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer 10+ */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* For Chrome, Safari, and Opera */
 }
 @media (max-width: 1024px) {
   .table tr {
@@ -427,6 +519,42 @@ table.equal-columns td table.equal-columns td {
 
   .menu-group {
     gap: 15px;
+  }
+
+  .modal-content {
+    margin: 5% auto;
+    padding: 30px 20px;
+    border: 1px solid #888;
+    width: 450px;
+    border-radius: 20px;
+    gap: 10px;
+    left: 10%;
+  }
+
+  .submit-btn {
+    margin: 10px auto 0px auto;
+    padding: 8px 17px;
+    border-radius: 7px;
+    font-size: 12px;
+  }
+
+  .btn-custom-upload {
+    padding: 0px 30px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+
+  .form-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .customLabel {
+    font-size: 12px;
+  }
+  .customInput {
+    font-size: 12px;
+    height: 30px;
   }
 }
 
@@ -534,4 +662,41 @@ table.equal-columns td table.equal-columns td {
     font-size: x-small;
     padding: 4px 15px;
   }
+  .modal-content {
+    margin: 5% auto;
+    padding: 30px 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    gap: 7px;
+    left: 0%;
+  }
+
+  .submit-btn {
+    margin: 10px auto 0px auto;
+    padding: 8px 17px;
+    border-radius: 7px;
+    font-size: 12px;
+  }
+
+  .btn-custom-upload {
+    padding: 0px 15px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .form-title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+    .customLabel {
+      margin-bottom: 5px;
+      font-size: 10px;
+      font-weight: 400;
+    }
+  
+    .customInput {
+      font-size: 10px;
+      height: 30px;
+    }
 }

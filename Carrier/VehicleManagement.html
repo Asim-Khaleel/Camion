@@ -140,6 +140,81 @@
                         </div>
                         <div>
                             <button class="add-item-btn" id="add-vehicle-btn">Add Vehicle</button>
+                            <div id="AddVehicleModal" class="modal">
+
+                                <div class="modal-content">
+                                    <p class="form-title">Add A New Vehicle</p>
+                                    <form id="addVehicleForm">
+
+                                        <div class="row">
+                                            <div class="col"> <label for="vehicleType">
+                                                    <p class="customLabel">Vehicle Type</p>
+                                                </label>
+                                                <select class="form-select customInput" id="vehicleType" aria-label="vehicleType">
+                                                    <option selected>Select Vehicle Type</option>
+                                                    <option selected>Cargo Ship</option>
+                                                    <option selected>Aircraft</option>
+                                                    <option selected>Truck</option>
+                                                    <option selected>Trains</option>
+                                                </select>
+                                            </div>
+                                            <div class="col form-group mb-lg-4 mb-md-3 mb-2">
+                                                <label for="modelYear">
+                                                    <p class="customLabel">Model Year</p>
+                                                </label>
+                                                <input type="text" class="form-control customInput" id="modelYear"
+                                                    aria-label="Model Year" placeholder="Enter Model Year" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col form-group mb-lg-4 mb-md-3 mb-2">
+                                                <label for="numberPlate">
+                                                    <p class="customLabel">Number Plate</p>
+                                                </label>
+                                                <input type="text" class="form-control customInput" id="numberPlate"
+                                                    aria-label="Number Plate" placeholder="Enter Number Plate" />
+                                            </div>
+                                            <div class="col form-group mb-lg-4 mb-md-3 mb-2">
+                                                <label for="color">
+                                                    <p class="customLabel">Enter Color</p>
+                                                </label>
+                                                <input type="text" class="form-control customInput" id="color" aria-label="color"
+                                                    placeholder="Enter Color" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col form-group mb-lg-4 mb-md-3 mb-2">
+                                            <label for="registrationNumber">
+                                                <p class="customLabel">Registration Number</p>
+                                            </label>
+                                            <input type="text" class="form-control customInput" id="registrationNumber" aria-label="Registration Number"
+                                                placeholder="Enter Registration Number" />
+                                        </div>
+                                        <div class="col form-group mb-lg-4 mb-md-3 mb-2">
+                                            <label for="IMEINumber">
+                                                <p class="customLabel">IMEI Number</p>
+                                            </label>
+                                            <input type="text" class="form-control customInput" id="IMEINumber" aria-label="color" placeholder="Enter Device IMEI" />
+                                        </div>
+                                        </div>
+                                      
+                                        <div class="mb-lg-4 mb-md-3 mb-2">
+                                            <label class="customLabel">Vehicle Registration</label>
+                                            <div class="file-container">
+                                                <div class="border rounded"><button id="uploadVehicleDocuments" class="btn-custom-upload" style="width: max-content;">Upload</button></div>
+                                                <input type="file" id="fileInput" style="display: none;" />
+                                            </div>
+                                        </div>
+
+                                        <div class="d-grid">
+                                            <button type="submit" class="submit-btn btn btn-primary">Add Vehicle</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                            </div>
+
                         </div>
                     </div>
                     <div class="search-and-entries-container mt-lg-4 mt-md-2 mt-1" style="margin-top: 30px;">
@@ -147,7 +222,7 @@
                             <span style="color: #535353">Show</span>
                             <div class="value-spinner">
                                 <input type="text" id="spinnerValue" readonly value="10" />
-                    
+
                                 <div class="spinner-icons">
                                     <img src="/assets/ic-previous.svg" onclick="changeValue(-1)" />
                                     <img src="/assets/ic-next.svg" onclick="changeValue(1)" />
@@ -200,95 +275,8 @@
                                                     style="color: #eb5757">Delete</span>
                                             </div>
                                             <div>
-                                                <img src="/assets/ic-driver.svg" /><span
-                                                    style="color: #0060B8">Assign Driver</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">
-                                        <span style="color: red">Driver Not Assign</span>
-                                    </td>
-                                    <td scope="col">Volvo Truck</td>
-                                    <td scope="col">2019</td>
-                                    <td scope="col">SNF B7 Z</td>
-                                    <td scope="col">White</td>
-                                    <td scope="col">IRZ2 9876</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">
-                                        <a style="color: #0060b8; cursor: pointer">View Document</a>
-                                    </td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div>
-                                                <img src="/assets/ic-edit.svg" /><span
-                                                    style="color: #27ae60">Edit</span>
-                                            </div>
-                                            <div>
-                                                <img src="/assets/ic-delete.svg" /><span
-                                                    style="color: #eb5757">Delete</span>
-                                            </div>
-                                        <div>
-                                            <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
-                                        </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">
-                                        <span style="color: red">Driver Not Assign</span>
-                                    </td>
-                                    <td scope="col">Volvo Truck</td>
-                                    <td scope="col">2019</td>
-                                    <td scope="col">SNF B7 Z</td>
-                                    <td scope="col">White</td>
-                                    <td scope="col">IRZ2 9876</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">
-                                        <a style="color: #0060b8; cursor: pointer">View Document</a>
-                                    </td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div>
-                                                <img src="/assets/ic-edit.svg" /><span
-                                                    style="color: #27ae60">Edit</span>
-                                            </div>
-                                            <div>
-                                                <img src="/assets/ic-delete.svg" /><span
-                                                    style="color: #eb5757">Delete</span>
-                                            </div>
-                                        <div>
-                                            <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
-                                        </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">
-                                        Fateme Ahmadi
-                                    </td>
-                                    <td scope="col">Volvo Truck</td>
-                                    <td scope="col">2019</td>
-                                    <td scope="col">SNF B7 Z</td>
-                                    <td scope="col">White</td>
-                                    <td scope="col">IRZ2 9876</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">
-                                        <a style="color: #0060b8; cursor: pointer">View Document</a>
-                                    </td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div>
-                                                <img src="/assets/ic-edit.svg" /><span
-                                                    style="color: #27ae60">Edit</span>
-                                            </div>
-                                            <div>
-                                                <img src="/assets/ic-delete.svg" /><span
-                                                    style="color: #eb5757">Delete</span>
-                                            </div>
-                                            <div>
-                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
                                             </div>
                                         </div>
                                     </td>
@@ -317,65 +305,8 @@
                                                     style="color: #eb5757">Delete</span>
                                             </div>
                                             <div>
-                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">
-                                        <span style="color: red">Driver Not Assign</span>
-                                    </td>
-                                    <td scope="col">Volvo Truck</td>
-                                    <td scope="col">2019</td>
-                                    <td scope="col">SNF B7 Z</td>
-                                    <td scope="col">White</td>
-                                    <td scope="col">IRZ2 9876</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">
-                                        <a style="color: #0060b8; cursor: pointer">View Document</a>
-                                    </td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div>
-                                                <img src="/assets/ic-edit.svg" /><span
-                                                    style="color: #27ae60">Edit</span>
-                                            </div>
-                                            <div>
-                                                <img src="/assets/ic-delete.svg" /><span
-                                                    style="color: #eb5757">Delete</span>
-                                            </div>
-                                        <div>
-                                            <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
-                                        </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col">
-                                        Fateme Ahmadi
-                                    </td>
-                                    <td scope="col">Volvo Truck</td>
-                                    <td scope="col">2019</td>
-                                    <td scope="col">SNF B7 Z</td>
-                                    <td scope="col">White</td>
-                                    <td scope="col">IRZ2 9876</td>
-                                    <td scope="col">1234567890</td>
-                                    <td scope="col">
-                                        <a style="color: #0060b8; cursor: pointer">View Document</a>
-                                    </td>
-                                    <td scope="col">
-                                        <div class="action-container">
-                                            <div>
-                                                <img src="/assets/ic-edit.svg" /><span
-                                                    style="color: #27ae60">Edit</span>
-                                            </div>
-                                            <div>
-                                                <img src="/assets/ic-delete.svg" /><span
-                                                    style="color: #eb5757">Delete</span>
-                                            </div>
-                                            <div>
-                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
                                             </div>
                                         </div>
                                     </td>
@@ -404,7 +335,8 @@
                                                     style="color: #eb5757">Delete</span>
                                             </div>
                                             <div>
-                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
                                             </div>
                                         </div>
                                     </td>
@@ -433,7 +365,68 @@
                                                     style="color: #eb5757">Delete</span>
                                             </div>
                                             <div>
-                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">
+                                        <span style="color: red">Driver Not Assign</span>
+                                    </td>
+                                    <td scope="col">Volvo Truck</td>
+                                    <td scope="col">2019</td>
+                                    <td scope="col">SNF B7 Z</td>
+                                    <td scope="col">White</td>
+                                    <td scope="col">IRZ2 9876</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">
+                                        <a style="color: #0060b8; cursor: pointer">View Document</a>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div>
+                                                <img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27ae60">Edit</span>
+                                            </div>
+                                            <div>
+                                                <img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #eb5757">Delete</span>
+                                            </div>
+                                            <div>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">
+                                        <span style="color: red">Driver Not Assign</span>
+                                    </td>
+                                    <td scope="col">Volvo Truck</td>
+                                    <td scope="col">2019</td>
+                                    <td scope="col">SNF B7 Z</td>
+                                    <td scope="col">White</td>
+                                    <td scope="col">IRZ2 9876</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">
+                                        <a style="color: #0060b8; cursor: pointer">View Document</a>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div>
+                                                <img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27ae60">Edit</span>
+                                            </div>
+                                            <div>
+                                                <img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #eb5757">Delete</span>
+                                            </div>
+                                            <div>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
                                             </div>
                                         </div>
                                     </td>
@@ -462,7 +455,98 @@
                                                     style="color: #eb5757">Delete</span>
                                             </div>
                                             <div>
-                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">
+                                        <span style="color: red">Driver Not Assign</span>
+                                    </td>
+                                    <td scope="col">Volvo Truck</td>
+                                    <td scope="col">2019</td>
+                                    <td scope="col">SNF B7 Z</td>
+                                    <td scope="col">White</td>
+                                    <td scope="col">IRZ2 9876</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">
+                                        <a style="color: #0060b8; cursor: pointer">View Document</a>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div>
+                                                <img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27ae60">Edit</span>
+                                            </div>
+                                            <div>
+                                                <img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #eb5757">Delete</span>
+                                            </div>
+                                            <div>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">
+                                        Fateme Ahmadi
+                                    </td>
+                                    <td scope="col">Volvo Truck</td>
+                                    <td scope="col">2019</td>
+                                    <td scope="col">SNF B7 Z</td>
+                                    <td scope="col">White</td>
+                                    <td scope="col">IRZ2 9876</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">
+                                        <a style="color: #0060b8; cursor: pointer">View Document</a>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div>
+                                                <img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27ae60">Edit</span>
+                                            </div>
+                                            <div>
+                                                <img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #eb5757">Delete</span>
+                                            </div>
+                                            <div>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">
+                                        Fateme Ahmadi
+                                    </td>
+                                    <td scope="col">Volvo Truck</td>
+                                    <td scope="col">2019</td>
+                                    <td scope="col">SNF B7 Z</td>
+                                    <td scope="col">White</td>
+                                    <td scope="col">IRZ2 9876</td>
+                                    <td scope="col">1234567890</td>
+                                    <td scope="col">
+                                        <a style="color: #0060b8; cursor: pointer">View Document</a>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="action-container">
+                                            <div>
+                                                <img src="/assets/ic-edit.svg" /><span
+                                                    style="color: #27ae60">Edit</span>
+                                            </div>
+                                            <div>
+                                                <img src="/assets/ic-delete.svg" /><span
+                                                    style="color: #eb5757">Delete</span>
+                                            </div>
+                                            <div>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
                                             </div>
                                         </div>
                                     </td>
@@ -492,7 +576,8 @@
                                                     style="color: #eb5757">Delete</span>
                                             </div>
                                             <div>
-                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
                                             </div>
                                         </div>
                                     </td>
@@ -522,7 +607,8 @@
                                                     style="color: #eb5757">Delete</span>
                                             </div>
                                             <div>
-                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
                                             </div>
                                         </div>
                                     </td>
@@ -551,7 +637,8 @@
                                                     style="color: #eb5757">Delete</span>
                                             </div>
                                             <div>
-                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
                                             </div>
                                         </div>
                                     </td>
@@ -580,7 +667,8 @@
                                                     style="color: #eb5757">Delete</span>
                                             </div>
                                             <div>
-                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
                                             </div>
                                         </div>
                                     </td>
@@ -609,13 +697,38 @@
                                                     style="color: #eb5757">Delete</span>
                                             </div>
                                             <div>
-                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign Driver</span>
+                                                <img src="/assets/ic-driver.svg" /><span style="color: #0060B8">Assign
+                                                    Driver</span>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <div id="assignDriverModal" class="modal">
+                        <div class="modal-content">
+                            <p class="form-title">Assign Driver</p>
+                            <form id="assignDriverForm">
+                                <div> <label for="driver">
+                                        <p class="customLabel">Driver</p>
+                                    </label>
+                                    <select class="form-select customInput" id="driver" aria-label="Driver">
+                                        <option selected>Select a Driver</option>
+                                        <option selected>Driver A</option>
+                                        <option selected>Driver B</option>
+                                        <option selected>Driver C</option>
+                                        <option selected>Driver D</option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="submit-btn btn btn-primary">
+                                        Assign Driver
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -645,6 +758,21 @@
 
             document.getElementById("spinnerValue").value = values[currentIndex];
         }
+
+
+        var modal = document.getElementById("AddVehicleModal");
+        var btn = document.getElementById("add-vehicle-btn");
+        btn.onclick = function () {
+            modal.style.display = "block";
+        };
+        document.getElementById('uploadVehicleDocuments').addEventListener('click', function () {
+            document.getElementById('fileInput').click();
+        });
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
     </script>
 </body>
 
